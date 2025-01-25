@@ -5,77 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Sidi-Walid HANI</title>
     <style>
-        /* Styles globaux */
+        /* Couleurs et police */
+        :root {
+            --primary-bg: #000000; /* Noir */
+            --primary-color: #FFD700; /* Or */
+            --text-color: #FFFFFF; /* Blanc */
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
+            background-color: var(--primary-bg);
+            color: var(--text-color);
         }
+
+        /* Header */
         header {
-            background: #007acc;
-            color: white;
+            background: var(--primary-bg);
             text-align: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
+
         header h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
             margin: 0;
-            font-size: 2.5rem;
+            animation: fadeIn 2s ease-in-out;
         }
+
         header p {
-            margin: 0.5rem 0 0;
             font-size: 1.2rem;
+            margin-top: 0.5rem;
         }
+
         nav {
             margin-top: 1rem;
         }
+
         nav a {
-            color: white;
+            color: var(--primary-color);
             text-decoration: none;
             margin: 0 1rem;
+            font-size: 1.1rem;
             font-weight: bold;
+            transition: color 0.3s ease-in-out;
         }
+
         nav a:hover {
-            text-decoration: underline;
+            color: var(--text-color);
         }
+
+        /* Section principale */
         section {
-            padding: 2rem;
+            padding: 3rem 1rem;
             text-align: center;
+            animation: slideIn 1.5s ease-in-out;
         }
+
         section h2 {
-            color: #007acc;
-            font-size: 2rem;
+            font-size: 2.5rem;
+            color: var(--primary-color);
             margin-bottom: 1rem;
         }
+
         section p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-bottom: 2rem;
+            line-height: 1.8;
         }
+
         ul {
             list-style: none;
             padding: 0;
         }
+
         ul li {
+            font-size: 1.2rem;
             margin: 0.5rem 0;
         }
+
+        /* Footer */
         footer {
-            background: #222;
-            color: white;
+            background: var(--primary-bg);
+            color: var(--text-color);
             text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
+            padding: 2rem 0;
+            margin-top: 3rem;
         }
+
         footer p {
             margin: 0;
+            font-size: 1rem;
         }
-        a {
-            color: #007acc;
-            text-decoration: none;
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
-        a:hover {
-            text-decoration: underline;
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -90,8 +135,8 @@
         </nav>
     </header>
     <section>
-        <h2>À propos de moi</h2>
-        <p>Je suis un ingénieur passionné par la sécurité informatique, le développement de solutions web, et l'optimisation des processus industriels.</p>
+        <h2>Bienvenue sur mon Portfolio</h2>
+        <p>Je suis un ingénieur passionné par la cybersécurité et le développement de solutions web modernes. Explorez mes compétences, projets, et contactez-moi pour collaborer.</p>
         <h2>Compétences principales</h2>
         <ul>
             <li>Sécurité informatique : Reverse Engineering, analyse forensique, cybersurveillance</li>
