@@ -8,89 +8,111 @@
         /* Couleurs et police */
         :root {
             --primary-bg: #000000; /* Noir */
-            --primary-color: #FFD700; /* Or */
+            --accent-color: #FFD700; /* Or */
             --text-color: #FFFFFF; /* Blanc */
+            --secondary-bg: #1a1a1a; /* Noir léger */
         }
 
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
+            font-family: 'Arial', sans-serif;
             background-color: var(--primary-bg);
             color: var(--text-color);
+            line-height: 1.6;
         }
 
         /* Header */
         header {
-            background: var(--primary-bg);
+            position: relative;
             text-align: center;
-            padding: 3rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            color: var(--text-color);
+            background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         header h1 {
             font-size: 3rem;
-            color: var(--primary-color);
             margin: 0;
-            animation: fadeIn 2s ease-in-out;
+            color: var(--accent-color);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             margin-top: 0.5rem;
         }
 
         nav {
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
         nav a {
-            color: var(--primary-color);
             text-decoration: none;
-            margin: 0 1rem;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
+            color: var(--text-color);
+            background: var(--accent-color);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin: 0 0.5rem;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         nav a:hover {
-            color: var(--text-color);
+            transform: scale(1.1);
+            background-color: var(--text-color);
+            color: var(--primary-bg);
         }
 
         /* Section principale */
         section {
-            padding: 3rem 1rem;
+            padding: 4rem 2rem;
             text-align: center;
-            animation: slideIn 1.5s ease-in-out;
         }
 
         section h2 {
+            color: var(--accent-color);
             font-size: 2.5rem;
-            color: var(--primary-color);
             margin-bottom: 1rem;
         }
 
         section p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
-            line-height: 1.8;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        /* Grille de compétences */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
         }
 
-        ul li {
-            font-size: 1.2rem;
-            margin: 0.5rem 0;
+        .skill {
+            background: var(--secondary-bg);
+            border: 1px solid var(--accent-color);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .skill h3 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
         }
 
         /* Footer */
         footer {
-            background: var(--primary-bg);
+            background: var(--secondary-bg);
             color: var(--text-color);
             text-align: center;
             padding: 2rem 0;
@@ -102,25 +124,13 @@
             font-size: 1rem;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
         }
 
-        @keyframes slideIn {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -136,13 +146,22 @@
     </header>
     <section>
         <h2>Bienvenue sur mon Portfolio</h2>
-        <p>Je suis un ingénieur passionné par la cybersécurité et le développement de solutions web modernes. Explorez mes compétences, projets, et contactez-moi pour collaborer.</p>
-        <h2>Compétences principales</h2>
-        <ul>
-            <li>Sécurité informatique : Reverse Engineering, analyse forensique, cybersurveillance</li>
-            <li>Développement web : HTML, CSS, React.js, Node.js, Python</li>
-            <li>Data Science : Power BI, SQL, MongoDB</li>
-        </ul>
+        <p>Je suis un ingénieur passionné par la cybersécurité, le développement de solutions web modernes, et l'optimisation des processus industriels. Explorez mes projets et compétences !</p>
+        <h2>Compétences</h2>
+        <div class="skills">
+            <div class="skill">
+                <h3>Sécurité Informatique</h3>
+                <p>Reverse Engineering, analyse forensique, cybersurveillance.</p>
+            </div>
+            <div class="skill">
+                <h3>Développement Web</h3>
+                <p>HTML, CSS, JavaScript, React.js, Node.js, Python.</p>
+            </div>
+            <div class="skill">
+                <h3>Data Science</h3>
+                <p>Power BI, SQL, MongoDB, création de tableaux de bord dynamiques.</p>
+            </div>
+        </div>
     </section>
     <footer>
         <p>&copy; 2025 Sidi-Walid HANI. Tous droits réservés.</p>
