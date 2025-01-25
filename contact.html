@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sidi-Walid HANI</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #1a1a1a;
+        }
+
+        header h1 {
+            color: #FFD700;
+            font-size: 2.5rem;
+        }
+
+        nav a {
+            color: #FFD700;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #FFD700;
+            font-size: 2.5rem;
+        }
+
+        form {
+            margin: 2rem auto;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin: 1rem 0 0.5rem;
+            color: #FFD700;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #FFD700;
+            border-radius: 5px;
+            background: #1a1a1a;
+            color: #FFFFFF;
+        }
+
+        form button {
+            margin-top: 1rem;
+            padding: 0.5rem 2rem;
+            background: #FFD700;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contactez-moi</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="projets.html">Projets</a>
+        </nav>
+    </header>
+    <section>
+        <h2>Restons en contact</h2>
+        <form action="mailto:hani.walid76620@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Sidi-Walid HANI. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

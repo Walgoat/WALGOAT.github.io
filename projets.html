@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Sidi-Walid HANI</title>
+    <style>
+        /* Styles globaux */
+        :root {
+            --primary-bg: #000000; /* Noir */
+            --accent-color: #FFD700; /* Or */
+            --text-color: #FFFFFF; /* Blanc */
+            --secondary-bg: #1a1a1a; /* Noir léger */
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--secondary-bg);
+        }
+
+        header h1 {
+            color: var(--accent-color);
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        nav a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section principale */
+        section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        section h2 {
+            color: var(--accent-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .project {
+            background: var(--secondary-bg);
+            border: 1px solid var(--accent-color);
+            padding: 1rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .project img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .project h3 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .project p {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background: var(--secondary-bg);
+            color: var(--text-color);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mes Projets</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section>
+        <h2>Projets Récents</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="https://via.placeholder.com/300x200" alt="Vinci Energies">
+                <h3>Vinci Energies</h3>
+                <p>Optimisation des processus industriels avec Python et Power BI.</p>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/300x200" alt="Safran Nacelles">
+                <h3>Safran Nacelles</h3>
+                <p>Création de KPI et bases de données relationnelles.</p>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/300x200" alt="Freelance">
+                <h3>Projets Freelance</h3>
+                <p>Développement de sites e-commerce et applications web modernes.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Sidi-Walid HANI. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
