@@ -1,13 +1,22 @@
-// Animation d'apparition des éléments
 document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".hero h2, .hero p, .hero .btn");
-    elements.forEach((el, index) => {
-        el.style.opacity = 0;
-        el.style.transform = "translateY(50px)";
-        setTimeout(() => {
-            el.style.transition = "all 0.6s ease";
-            el.style.opacity = 1;
-            el.style.transform = "translateY(0)";
-        }, index * 200);
-    });
+    const frBtn = document.getElementById("fr-btn");
+    const enBtn = document.getElementById("en-btn");
+    const frElements = document.querySelectorAll(".lang-fr");
+    const enElements = document.querySelectorAll(".lang-en");
+
+    // Fonction pour afficher le français
+    const showFrench = () => {
+        frElements.forEach(el => el.style.display = "block");
+        enElements.forEach(el => el.style.display = "none");
+    };
+
+    // Fonction pour afficher l'anglais
+    const showEnglish = () => {
+        frElements.forEach(el => el.style.display = "none");
+        enElements.forEach(el => el.style.display = "block");
+    };
+
+    // Ajout des événements sur les boutons
+    frBtn.addEventListener("click", showFrench);
+    enBtn.addEventListener("click", showEnglish);
 });

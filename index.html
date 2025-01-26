@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Sidi-Walid HANI</title>
-    <!-- Lien vers le CSS -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Lien vers les polices Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Sélecteur de langue -->
+    <div class="language-switcher">
+        <button id="fr-btn">Français</button>
+        <button id="en-btn">English</button>
+    </div>
+
     <!-- Header avec navigation -->
     <header class="header">
         <div class="container">
@@ -28,10 +32,15 @@
 
     <!-- Section Héroïque -->
     <section class="hero">
-        <div class="container">
+        <div class="lang-fr">
             <h2>Bienvenue sur mon Portfolio</h2>
             <p>Ingénieur en Sécurité Informatique & Développeur Web</p>
             <a href="contact.html" class="btn">Contactez-moi</a>
+        </div>
+        <div class="lang-en" style="display: none;">
+            <h2>Welcome to my Portfolio</h2>
+            <p>Security Engineer & Web Developer</p>
+            <a href="contact.html" class="btn">Contact Me</a>
         </div>
     </section>
 
@@ -42,7 +51,6 @@
         </div>
     </footer>
 
-    <!-- Lien vers le JS -->
     <script src="script.js"></script>
 </body>
 </html>
