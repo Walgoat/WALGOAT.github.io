@@ -9,33 +9,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Sélecteur de langue -->
+    <div class="language-switcher">
+        <button id="fr-btn">Français</button>
+        <button id="en-btn">English</button>
+    </div>
+
+    <!-- Header -->
     <header>
         <nav>
             <ul class="navbar">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="experiences.html">Expériences</a></li>
-                <li><a href="projets.html">Projets</a></li>
+                <li><a href="projets.html" class="active">Projets</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Section Projets -->
     <section class="projets">
-        <h1>Mes Projets</h1>
-        <div class="project-list">
+        <div class="lang-fr">
+            <h1>Mes Projets</h1>
             <div class="project-item">
                 <h2>Portfolio Personnel</h2>
                 <p>Création d'un portfolio moderne en utilisant HTML, CSS, et JavaScript, avec des animations et une structure réactive.</p>
             </div>
-
             <div class="project-item">
                 <h2>Application de Gestion des Tâches</h2>
                 <p>Développement d'une application web pour gérer les tâches quotidiennes, en utilisant React.js et Firebase pour la base de données.</p>
             </div>
+        </div>
 
+        <div class="lang-en" style="display: none;">
+            <h1>My Projects</h1>
             <div class="project-item">
-                <h2>Site E-commerce</h2>
-                <p>Développement d'une plateforme de vente en ligne avec Django et React.js, incluant un système de gestion des paiements et des utilisateurs.</p>
+                <h2>Personal Portfolio</h2>
+                <p>Creation of a modern portfolio using HTML, CSS, and JavaScript, with animations and a responsive structure.</p>
+            </div>
+            <div class="project-item">
+                <h2>Task Management App</h2>
+                <p>Development of a web application for managing daily tasks using React.js and Firebase for the database.</p>
             </div>
         </div>
     </section>
@@ -43,5 +57,7 @@
     <footer>
         <p>&copy; 2025 Sidi-Walid HANI. Tous droits réservés.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

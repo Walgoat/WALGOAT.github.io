@@ -9,39 +9,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Sélecteur de langue -->
+    <div class="language-switcher">
+        <button id="fr-btn">Français</button>
+        <button id="en-btn">English</button>
+    </div>
+
+    <!-- Header -->
     <header>
         <nav>
             <ul class="navbar">
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="experiences.html">Expériences</a></li>
+                <li><a href="experiences.html" class="active">Expériences</a></li>
                 <li><a href="projets.html">Projets</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Section Expériences -->
     <section class="experiences">
-        <h1>Expériences Professionnelles</h1>
-        <div class="experience-list">
+        <div class="lang-fr">
+            <h1>Expériences Professionnelles</h1>
             <div class="experience-item">
                 <h2>Vinci Energies</h2>
                 <p><strong>Période :</strong> Janvier 2024 - Décembre 2024</p>
                 <p><strong>Poste :</strong> Ingénieur Sécurité Informatique</p>
                 <p>Optimisation des processus industriels avec Python et Power BI. Création de solutions pour l'automatisation et l'analyse de données.</p>
             </div>
-
             <div class="experience-item">
                 <h2>Safran Nacelles</h2>
                 <p><strong>Période :</strong> Juin 2023 - Décembre 2023</p>
                 <p><strong>Poste :</strong> Développeur de Solutions</p>
                 <p>Création de KPI et bases de données relationnelles. Amélioration des performances des systèmes d'information internes.</p>
             </div>
+        </div>
 
+        <div class="lang-en" style="display: none;">
+            <h1>Professional Experiences</h1>
             <div class="experience-item">
-                <h2>Freelance</h2>
-                <p><strong>Période :</strong> 2022 - Présent</p>
-                <p><strong>Poste :</strong> Développeur Full Stack</p>
-                <p>Développement de sites e-commerce et d'applications web modernes en utilisant React.js, Node.js et Django.</p>
+                <h2>Vinci Energies</h2>
+                <p><strong>Period:</strong> January 2024 - December 2024</p>
+                <p><strong>Role:</strong> Security Engineer</p>
+                <p>Optimization of industrial processes using Python and Power BI. Development of automation and data analysis solutions.</p>
+            </div>
+            <div class="experience-item">
+                <h2>Safran Nacelles</h2>
+                <p><strong>Period:</strong> June 2023 - December 2023</p>
+                <p><strong>Role:</strong> Solutions Developer</p>
+                <p>Creation of KPIs and relational databases. Improvement of internal information systems performance.</p>
             </div>
         </div>
     </section>
@@ -49,5 +65,7 @@
     <footer>
         <p>&copy; 2025 Sidi-Walid HANI. Tous droits réservés.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
