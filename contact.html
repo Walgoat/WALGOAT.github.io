@@ -9,37 +9,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Sélecteur de langue -->
+    <div class="language-switcher">
+        <button id="fr-btn">Français</button>
+        <button id="en-btn">English</button>
+    </div>
+
+    <!-- Header -->
     <header>
         <nav>
             <ul class="navbar">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="experiences.html">Expériences</a></li>
                 <li><a href="projets.html">Projets</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Section Contact -->
     <section class="contact">
-        <h1>Contactez-moi</h1>
-        <p>Pour toute question ou opportunité, n'hésitez pas à me contacter en remplissant le formulaire ci-dessous :</p>
+        <div class="lang-fr">
+            <h1>Contactez-moi</h1>
+            <form action="mailto:hani.walid76620@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
 
-        <form action="mailto:hani.walid76620@gmail.com" method="post" enctype="text/plain" class="contact-form">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message :</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">Envoyer</button>
-        </form>
+        <div class="lang-en" style="display: none;">
+            <h1>Contact Me</h1>
+            <form action="mailto:hani.walid76620@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Sidi-Walid HANI. Tous droits réservés.</p>
+        <p>&copy; 2025 Sidi-Walid HANI. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
