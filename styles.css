@@ -15,31 +15,7 @@ body {
     line-height: 1.6;
 }
 
-/* Sélecteur de langue */
-.language-switcher {
-    display: flex;
-    justify-content: center;
-    margin: 1rem 0;
-    gap: 1rem;
-}
-
-.language-switcher button {
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.language-switcher button:hover {
-    background-color: var(--text-color);
-    color: var(--primary-color);
-}
-
-/* Header */
+/* Barre de navigation sticky */
 .header {
     background-color: var(--secondary-bg);
     padding: 1rem 2rem;
@@ -49,6 +25,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .header .logo {
@@ -74,6 +51,28 @@ body {
 
 .navbar a.active,
 .navbar a:hover {
+    color: var(--primary-color);
+}
+
+/* Sélecteur de langue */
+.language-switcher {
+    display: flex;
+    gap: 1rem;
+}
+
+.language-switcher button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.language-switcher button:hover {
+    background-color: var(--text-color);
     color: var(--primary-color);
 }
 
@@ -114,10 +113,77 @@ body {
     color: var(--primary-color);
 }
 
+/* Section Expériences */
+.experiences,
+.projets,
+.contact {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.experiences h1,
+.projets h1,
+.contact h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.experience-item,
+.project-item {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.experience-item:hover,
+.project-item:hover {
+    transform: scale(1.02);
+}
+
+/* Section Contact */
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.contact-form button {
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+}
+
 /* Footer */
-.footer {
+footer {
     background-color: var(--secondary-bg);
     padding: 1rem;
     text-align: center;
     font-size: 0.9rem;
+    border-top: 2px solid var(--primary-color);
 }
