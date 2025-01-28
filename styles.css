@@ -1,9 +1,11 @@
 /* Couleurs principales */
 :root {
-    --primary-color: #FFD700; /* Or */
-    --background-color: #000000; /* Noir */
-    --text-color: #FFFFFF; /* Blanc */
-    --secondary-bg: #1a1a1a; /* Noir léger */
+    --primary-color: #007BFF; /* Bleu moderne */
+    --secondary-color: #6C757D; /* Gris */
+    --background-color: #F8F9FA; /* Fond clair */
+    --text-color: #343A40; /* Texte sombre */
+    --accent-color: #FFC107; /* Jaune pour les accents */
+    --white: #FFFFFF;
 }
 
 /* Réinitialisation globale */
@@ -15,9 +17,9 @@ body {
     line-height: 1.6;
 }
 
-/* Barre de navigation sticky */
+/* Barre de navigation */
 .header {
-    background-color: var(--secondary-bg);
+    background-color: var(--white);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -25,7 +27,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 2px solid var(--primary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header .logo {
@@ -63,7 +65,7 @@ body {
 .language-switcher button {
     padding: 0.5rem 1rem;
     background-color: var(--primary-color);
-    color: var(--background-color);
+    color: var(--white);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -72,8 +74,7 @@ body {
 }
 
 .language-switcher button:hover {
-    background-color: var(--text-color);
-    color: var(--primary-color);
+    background-color: var(--accent-color);
 }
 
 /* Section Héroïque */
@@ -83,107 +84,158 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, var(--background-color), var(--secondary-bg));
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
 }
 
 .hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.hero .btn {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-weight: 600;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.hero .btn:hover {
+    transform: scale(1.1);
+    background-color: var(--white);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Section À propos */
+.about {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about h1 {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
-.hero p {
+.about p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    line-height: 1.8;
 }
 
-.hero .btn {
-    text-decoration: none;
-    padding: 0.8rem 2rem;
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    font-weight: 600;
-    border-radius: 5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+.about-image img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.hero .btn:hover {
-    transform: scale(1.1);
-    background-color: var(--text-color);
+/* Section Compétences */
+.skills {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.skills h1 {
+    font-size: 2.5rem;
     color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-/* Section Expériences */
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-item span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.progress-bar {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    height: 10px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.progress {
+    background-color: var(--primary-color);
+    height: 100%;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
+
+/* Section Expériences et Projets */
 .experiences,
-.projets,
-.contact {
-    padding: 2rem;
+.projets {
+    padding: 4rem 2rem;
     max-width: 1200px;
     margin: auto;
 }
 
 .experiences h1,
-.projets h1,
-.contact h1 {
-    font-size: 2rem;
+.projets h1 {
+    font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .experience-item,
 .project-item {
-    background-color: var(--secondary-bg);
-    border: 1px solid var(--primary-color);
+    background-color: var(--white);
     border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .experience-item:hover,
 .project-item:hover {
-    transform: scale(1.02);
-}
-
-/* Section Contact */
-.contact-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-.contact-form button {
-    padding: 0.8rem 2rem;
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: var(--text-color);
-    color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Footer */
 footer {
-    background-color: var(--secondary-bg);
-    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem;
     text-align: center;
-    font-size: 0.9rem;
-    border-top: 2px solid var(--primary-color);
+    margin-top: 4rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
 }
