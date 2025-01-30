@@ -1,32 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const frBtn = document.getElementById("fr-btn");
-    const enBtn = document.getElementById("en-btn");
+    // Mode jour/nuit
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    themeToggle.addEventListener("click", () => {
+        body.dataset.theme = body.dataset.theme === "dark" ? "light" : "dark";
+        themeToggle.textContent = body.dataset.theme === "dark" ? "🌞" : "🌙";
+    });
+
+    // Gestion des langues
+    const langFr = document.getElementById("lang-fr");
+    const langEn = document.getElementById("lang-en");
     const frElements = document.querySelectorAll(".lang-fr");
     const enElements = document.querySelectorAll(".lang-en");
 
-    // Fonction pour afficher le français
-    const showFrench = () => {
+    langFr.addEventListener("click", () => {
         frElements.forEach(el => el.style.display = "block");
         enElements.forEach(el => el.style.display = "none");
-    };
+    });
 
-    // Fonction pour afficher l'anglais
-    const showEnglish = () => {
+    langEn.addEventListener("click", () => {
         frElements.forEach(el => el.style.display = "none");
         enElements.forEach(el => el.style.display = "block");
-    };
+    });
 
-    // Ajout des événements sur les boutons
-    frBtn.addEventListener("click", showFrench);
-    enBtn.addEventListener("click", showEnglish);
-
-    // Animation des barres de progression
-    const progressBars = document.querySelectorAll(".progress");
-    progressBars.forEach(bar => {
-        const width = bar.style.width;
-        bar.style.width = "0";
-        setTimeout(() => {
-            bar.style.width = width;
-        }, 500);
+    // Formulaire de contact
+    const contactForm = document.getElementById("contact-form");
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Merci pour votre message ! Je vous répondrai dès que possible.");
+        contactForm.reset();
     });
 });
